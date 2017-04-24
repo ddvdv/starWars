@@ -1,15 +1,65 @@
 body {
-	background-color: black;
+	background: url('starry-sky-004.jpg');
+	opacity: 0.5;
+
 }
+
 
 .container {
 	color: yellow;
-	width: 60%;
-	height: 60%;
-	margin: auto;
+	width: 18em;
+	height: 50em;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 300%;
+	font-weight: bold;
 	text-align: center;
-	-webkit-perspective, -moz-perspective: 500px;
-	transform: rotate3d(1, 0, 0, 50deg);
-	border: 1px solid white;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(400px) rotateX(25deg);
+
+
+	/*
+	vertical-align: bottom;
+	animation-name: scroll;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	*/
 }
+
+.intro {
+	font-size: 400%;
+	width: 50%;
+	height: 100%;
+	padding: 10% 20%;
+	margin: auto;
+	color: #086675;
+	animation-name: disapear;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+
+.container-scroll {
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+
+@keyframes scroll {
+	0% {top: 100%;}
+	100% {top: -170%;}
+}
+
+@keyframes disapear {
+   0% {opacity: 0; }
+   5% {opacity: 1;  }
+   80% {opacity: 1; }
+   100% {opacity: 0; }
+}
+
+
 
