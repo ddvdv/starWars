@@ -1,0 +1,15 @@
+body {
+	background-color: black;
+}
+
+.container {
+	color: yellow;
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	text-align: center;
+	-webkit-perspective, -moz-perspective: 500px;
+	transform: rotate3d(1, 0, 0, 50deg);
+	border: 1px solid white;
+}
+
